@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
+import { Logo } from "@/components/layout/Logo";
 import { services } from "@/data/services";
 
 export function MobileNav() {
@@ -22,9 +23,7 @@ export function MobileNav() {
       {open ? (
         <div className="fixed inset-0 z-50 bg-navy-950">
           <div className="flex h-18 items-center justify-between px-6">
-            <span className="text-xl font-extrabold tracking-tight text-white">
-              Alpho<span className="text-brand-light">.</span>
-            </span>
+            <Logo />
             <button
               type="button"
               onClick={() => setOpen(false)}

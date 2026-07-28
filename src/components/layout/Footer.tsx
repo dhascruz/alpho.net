@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
+import { Logo } from "@/components/layout/Logo";
 import { footerNav } from "@/data/nav";
 
 export function Footer() {
@@ -10,9 +11,7 @@ export function Footer() {
       <Container className="py-16">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <span className="text-xl font-extrabold tracking-tight">
-              Alpho<span className="text-brand-light">.</span>
-            </span>
+            <Logo />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
               Alpho builds scalable digital products and managed IT solutions
               that help businesses grow faster — from Laravel, Next.js, and
