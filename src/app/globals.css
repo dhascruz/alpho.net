@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --surface: #f6f7fb;
+  --surface-strong: #eef0f8;
+  --foreground: #0b1220;
+  --muted: #4b5568;
+  --border: #e3e6ef;
+
+  --navy-950: #0b1220;
+  --navy-900: #111a2e;
+  --navy-800: #182544;
+
+  --brand: #4338ca;
+  --brand-strong: #372aad;
+  --brand-light: #6366f1;
+  --brand-tint: #eef0fd;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-light: var(--brand-light);
+  --color-brand-tint: var(--brand-tint);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: var(--brand);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Soft blurred gradient shapes used behind hero / CTA sections, thoughtbot-style
+   without relying on any photography or external image assets. */
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blob-indigo {
+  background: radial-gradient(circle at 30% 30%, var(--brand-light), transparent 70%);
+}
+
+.blob-sky {
+  background: radial-gradient(circle at 30% 30%, #38bdf8, transparent 70%);
+}
+
+.blob-amber {
+  background: radial-gradient(circle at 30% 30%, #fbbf24, transparent 70%);
+}
+
+.section-shell {
+  position: relative;
+  overflow: hidden;
+}
