@@ -9,6 +9,7 @@ import {
   Calculator,
   Cloud,
   Headset,
+  Palette,
   type LucideIcon,
 } from "lucide-react";
 
@@ -194,7 +195,7 @@ export const services: Service[] = [
       "Mobile app",
       "Reports & analytics",
     ],
-    technologies: ["Laravel", "Next.js", "PostgreSQL", "WebRTC", "Redis"],
+    technologies: ["Laravel", "Next.js", "Moodle", "PostgreSQL", "WebRTC", "Redis"],
     whoItsFor: ["Schools & colleges", "Training institutes", "Corporate training teams"],
     seoTitle: "LMS Development Company",
     seoDescription:
@@ -221,11 +222,41 @@ export const services: Service[] = [
       "GST invoicing",
       "Mobile-responsive storefronts",
     ],
-    technologies: ["Laravel Commerce", "Shopify", "WooCommerce", "Next.js", "Headless CMS"],
+    technologies: ["Laravel Commerce", "Shopify", "WooCommerce", "OpenCart", "Next.js", "Headless CMS"],
     whoItsFor: ["Retail businesses", "Multi-vendor marketplace operators", "Brands outgrowing an off-the-shelf storefront"],
     seoTitle: "Ecommerce Development Company",
     seoDescription:
-      "Ecommerce development across Laravel Commerce, Shopify, WooCommerce, and headless commerce — payments, inventory, multi-vendor, and GST invoicing.",
+      "Ecommerce development across Laravel Commerce, Shopify, WooCommerce, OpenCart, and headless commerce — payments, inventory, multi-vendor, and GST invoicing.",
+  },
+  {
+    slug: "theme-design-customization",
+    name: "Theme Design & Customization",
+    shortName: "Theme Design",
+    tagline: "Custom, on-brand themes for WordPress, Moodle, and OpenCart.",
+    summary:
+      "Custom theme design and customization for WordPress, Moodle, and OpenCart — a fast, on-brand, mobile-first front end for platforms you already run, without a full rebuild.",
+    heroDescription:
+      "Not every project needs a from-scratch build. Our theme design and customization service gives your existing WordPress site, Moodle LMS, or OpenCart store a custom, on-brand, high-performance front end — with responsive templates, plugin and module customization, and page builder implementation, all tuned for Core Web Vitals.",
+    icon: Palette,
+    features: [
+      "Custom WordPress theme design",
+      "Moodle theme & branding customization",
+      "OpenCart storefront theme design",
+      "Responsive, mobile-first templates",
+      "Plugin & module customization",
+      "Page builder implementation",
+      "Brand system integration",
+      "Performance & Core Web Vitals optimization",
+    ],
+    technologies: ["WordPress", "Moodle", "OpenCart", "PHP", "WooCommerce", "Elementor"],
+    whoItsFor: [
+      "Businesses already running WordPress, Moodle, or OpenCart",
+      "Teams needing a design refresh without a full platform rebuild",
+      "Educational institutes customizing Moodle for their brand",
+    ],
+    seoTitle: "Theme Design & Customization Services",
+    seoDescription:
+      "Custom theme design and customization for WordPress, Moodle, and OpenCart — responsive templates, plugin customization, and brand-matched design systems.",
   },
   {
     slug: "ledgerly",

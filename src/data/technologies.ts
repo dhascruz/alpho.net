@@ -21,6 +21,10 @@ export const technologyGroups: TechGroup[] = [
     items: ["OAuth", "JWT", "Sanctum"],
   },
   {
+    category: "CMS & Platforms",
+    items: ["WordPress", "Moodle", "OpenCart", "WooCommerce"],
+  },
+  {
     category: "Cloud",
     items: ["AWS", "Azure"],
   },

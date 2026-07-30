@@ -45,7 +45,7 @@ export const industries: Industry[] = [
     description:
       "Give schools, colleges, and training institutes a single platform for classes, assessment, and student records.",
     icon: School,
-    relatedServiceSlugs: ["lms"],
+    relatedServiceSlugs: ["lms", "theme-design-customization"],
   },
   {
     slug: "retail-businesses",
@@ -54,7 +54,7 @@ export const industries: Industry[] = [
     description:
       "Sell online without sacrificing inventory accuracy, GST compliance, or checkout speed.",
     icon: Store,
-    relatedServiceSlugs: ["ecommerce-development"],
+    relatedServiceSlugs: ["ecommerce-development", "theme-design-customization"],
   },
   {
     slug: "enterprises",

@@ -18,6 +18,7 @@ export const footerNav = {
     { label: "NestJS Development", href: "/services/nestjs-development" },
     { label: "Learning Management Systems", href: "/services/lms" },
     { label: "Ecommerce Development", href: "/services/ecommerce-development" },
+    { label: "Theme Design & Customization", href: "/services/theme-design-customization" },
     { label: "Ledgerly Accounting Software", href: "/services/ledgerly" },
     { label: "Cloud Infrastructure Management", href: "/services/cloud-infrastructure" },
     { label: "Remote IT Support", href: "/services/remote-it-support" },
