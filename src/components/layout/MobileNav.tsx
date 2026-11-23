@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Logo } from "@/components/layout/Logo";
 import { services } from "@/data/services";
+import { productsMenu } from "@/data/products";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -45,6 +46,20 @@ export function MobileNav() {
                   className="rounded-lg px-2 py-2 text-white/80 hover:bg-white/5 hover:text-white"
                 >
                   {service.shortName}
+                </Link>
+              ))}
+            </div>
+
+            <p className="mb-2 mt-6 font-mono text-xs uppercase tracking-widest text-white/40">Products</p>
+            <div className="flex flex-col gap-1 border-b border-white/10 pb-6">
+              {productsMenu.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-2 py-2 text-white/80 hover:bg-white/5 hover:text-white"
+                >
+                  {item.label}
                 </Link>
               ))}
             </div>

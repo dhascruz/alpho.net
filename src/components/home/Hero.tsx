@@ -21,8 +21,8 @@ export function Hero() {
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
           From Laravel, Next.js, and NestJS development to LMS platforms,
-          ecommerce, Ledgerly accounting software, cloud infrastructure, and
-          24/7 remote IT support — we deliver secure, high-performance
+          ecommerce, Ledgerly accounting software, Odoo, ERP and Moodle
+          products, cloud infrastructure, and 24/7 remote IT support — we deliver secure, high-performance
           solutions tailored to your business goals.
         </p>
 
@@ -33,6 +33,9 @@ export function Hero() {
           </Button>
           <Button href="/portfolio" variant="outline-invert" size="lg">
             View Our Work
+          </Button>
+          <Button href="/products" variant="outline-invert" size="lg">
+            Explore Products
           </Button>
         </div>
       </Container>

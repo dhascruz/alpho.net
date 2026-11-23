@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Logo } from "@/components/layout/Logo";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { services } from "@/data/services";
+import { productsMenu } from "@/data/products";
 import { cn } from "@/lib/utils";
 
 const dropdownLinkClass =
@@ -37,6 +38,21 @@ export function Header() {
                   View all services
                   <ArrowRight className="size-4" />
                 </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="group relative">
+            <button className="flex items-center gap-1 rounded-full px-4 py-2 text-sm font-medium text-white/80 transition-colors hover:text-white">
+              Products
+            </button>
+            <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+              <div className="flex flex-col gap-1 rounded-2xl border border-white/10 bg-navy-900 p-3 shadow-2xl">
+                {productsMenu.map((item) => (
+                  <Link key={item.label} href={item.href} className={dropdownLinkClass}>
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
