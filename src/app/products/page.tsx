@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { CTABanner } from "@/components/home/CTABanner";
+import { ProductsSlider } from "@/components/home/ProductsSlider";
 import { productLines } from "@/data/products";
 
 export const metadata: Metadata = {
@@ -55,6 +56,8 @@ export default function ProductsPage() {
           </div>
         </Container>
       </Section>
+
+      <ProductsSlider tone="surface" />
 
       <CTABanner />
     </>

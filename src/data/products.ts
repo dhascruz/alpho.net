@@ -116,3 +116,66 @@ export const productsMenu = [
   { label: "Moodle Theme Development", href: "/products/moodle/theme-development" },
   { label: "Tresa Moodle Theme", href: "/products/moodle/tresa" },
 ];
+
+export type ProductSlide = {
+  name: string;
+  tag: string;
+  summary: string;
+  href: string;
+  cta: string;
+  image?: string;
+  icon: LucideIcon;
+};
+
+export const productSlides: ProductSlide[] = [
+  {
+    name: "Tresa Moodle Theme",
+    tag: "Moodle theme · $30 one-time",
+    summary:
+      "A modern, responsive, and customizable Moodle theme for an engaging online learning experience.",
+    href: "/products/moodle/tresa",
+    cta: "View Tresa",
+    image: "/products/tresa-screenshot.png",
+    icon: Palette,
+  },
+  {
+    name: "Moodle Plugin Development",
+    tag: "Moodle",
+    summary: "Custom activity, block, local, and report plugins built to Moodle standards.",
+    href: "/products/moodle",
+    cta: "Explore Moodle",
+    icon: Puzzle,
+  },
+  {
+    name: "Moodle Theme Development",
+    tag: "Moodle",
+    summary: "Custom, branded, mobile-first Moodle themes built and tested on staging.",
+    href: "/products/moodle/theme-development",
+    cta: "Theme development",
+    icon: Palette,
+  },
+  {
+    name: "Moodle Upgrades & Support",
+    tag: "Moodle",
+    summary: "Safe upgrades to the latest Moodle plus hands-on implementation support.",
+    href: "/products/moodle",
+    cta: "Explore Moodle",
+    icon: ArrowUpCircle,
+  },
+  {
+    name: "Odoo Plugins",
+    tag: "Odoo",
+    summary: "Custom Odoo modules and integrations that fit the way your business works.",
+    href: "/contact",
+    cta: "Talk to us",
+    icon: Blocks,
+  },
+  {
+    name: "ERP",
+    tag: "ERP",
+    summary: "ERP implementation and tailoring for finance, inventory, sales, and operations.",
+    href: "/contact",
+    cta: "Talk to us",
+    icon: Boxes,
+  },
+];
