@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
@@ -75,7 +76,15 @@ export default function MoodleThemeDevelopmentPage() {
           <SectionHeading eyebrow="Ready-made themes" title="Moodle themes" />
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <Link href="/products/moodle/tresa" className="group">
-              <Card className="h-full">
+              <Card className="h-full overflow-hidden !p-0">
+                <Image
+                  src="/products/tresa-screenshot.png"
+                  alt="Tresa Moodle theme preview"
+                  width={1440}
+                  height={900}
+                  className="aspect-[16/10] w-full object-cover object-top"
+                />
+                <div className="p-6">
                 <h3 className="text-xl font-semibold text-foreground group-hover:text-brand">
                   Tresa
                 </h3>
@@ -86,6 +95,7 @@ export default function MoodleThemeDevelopmentPage() {
                   View Tresa
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </span>
+                </div>
               </Card>
             </Link>
           </div>

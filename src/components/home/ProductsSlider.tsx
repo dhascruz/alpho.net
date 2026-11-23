@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -11,6 +11,20 @@ import { productSlides } from "@/data/products";
 
 export function ProductsSlider({ tone = "light" }: { tone?: "light" | "surface" }) {
   const track = useRef<HTMLDivElement>(null);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = window.setInterval(() => {
+      const el = track.current;
+      if (!el) return;
+      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 8;
+      if (atEnd) el.scrollTo({ left: 0, behavior: "smooth" });
+      else el.scrollBy({ left: Math.min(el.clientWidth * 0.8, 380), behavior: "smooth" });
+    }, 3500);
+    return () => window.clearInterval(id);
+  }, [paused]);
 
   const scroll = (dir: 1 | -1) => {
     const el = track.current;
@@ -49,6 +63,9 @@ export function ProductsSlider({ tone = "light" }: { tone?: "light" | "surface" 
 
         <div
           ref={track}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onTouchStart={() => setPaused(true)}
           className="-mx-6 mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-6 pb-4 [scrollbar-width:thin] lg:-mx-8 lg:px-8"
           tabIndex={0}
           aria-label="Products"

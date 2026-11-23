@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
@@ -31,6 +32,15 @@ export default function ProductsPage() {
             {productLines.map((p) => (
               <Link key={p.slug} href={p.href} className="group">
                 <Card className="h-full">
+                  {p.image ? (
+                    <Image
+                      src={p.image}
+                      alt={`${p.name} preview`}
+                      width={1914}
+                      height={900}
+                      className="-mx-6 -mt-6 mb-6 aspect-[16/9] w-[calc(100%+3rem)] max-w-none rounded-t-2xl object-cover object-top"
+                    />
+                  ) : null}
                   <div className="flex size-11 items-center justify-center rounded-xl bg-brand-tint text-brand">
                     <p.icon className="size-5" />
                   </div>

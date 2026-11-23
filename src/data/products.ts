@@ -15,6 +15,7 @@ export type ProductLine = {
   href: string;
   summary: string;
   icon: LucideIcon;
+  image?: string;
   highlights: string[];
 };
 
@@ -26,6 +27,7 @@ export const productLines: ProductLine[] = [
     summary:
       "Custom Odoo modules and integrations that extend Odoo to fit the way your business actually works.",
     icon: Blocks,
+    image: "/products/odoo-plugins.png",
     highlights: ["Custom module development", "Third-party integrations", "Odoo version upgrades"],
   },
   {
@@ -35,6 +37,7 @@ export const productLines: ProductLine[] = [
     summary:
       "ERP implementation and tailoring for finance, inventory, sales, purchasing, and operations.",
     icon: Boxes,
+    image: "/products/erp-apps.png",
     highlights: ["Requirements & workflow mapping", "Data migration", "Training & rollout"],
   },
   {
@@ -144,6 +147,7 @@ export const productSlides: ProductSlide[] = [
     summary: "Custom activity, block, local, and report plugins built to Moodle standards.",
     href: "/products/moodle",
     cta: "Explore Moodle",
+    image: "/products/plugin-placeholder.svg",
     icon: Puzzle,
   },
   {
@@ -152,6 +156,7 @@ export const productSlides: ProductSlide[] = [
     summary: "Custom, branded, mobile-first Moodle themes built and tested on staging.",
     href: "/products/moodle/theme-development",
     cta: "Theme development",
+    image: "/products/tresa-screenshot.png",
     icon: Palette,
   },
   {
@@ -160,6 +165,7 @@ export const productSlides: ProductSlide[] = [
     summary: "Safe upgrades to the latest Moodle plus hands-on implementation support.",
     href: "/products/moodle",
     cta: "Explore Moodle",
+    image: "/products/moodle-upgrade-screenshot.png",
     icon: ArrowUpCircle,
   },
   {
@@ -168,6 +174,7 @@ export const productSlides: ProductSlide[] = [
     summary: "Custom Odoo modules and integrations that fit the way your business works.",
     href: "/contact",
     cta: "Talk to us",
+    image: "/products/odoo-plugins.png",
     icon: Blocks,
   },
   {
@@ -176,6 +183,16 @@ export const productSlides: ProductSlide[] = [
     summary: "ERP implementation and tailoring for finance, inventory, sales, and operations.",
     href: "/contact",
     cta: "Talk to us",
+    image: "/products/erp-apps.png",
+    icon: Boxes,
+  },
+  {
+    name: "ERP Accounting & Dashboards",
+    tag: "ERP",
+    summary: "Invoices, bills, journals, balances and key financial figures in one dashboard.",
+    href: "/contact",
+    cta: "Talk to us",
+    image: "/products/erp-accounting.png",
     icon: Boxes,
   },
 ];

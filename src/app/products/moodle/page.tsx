@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
@@ -44,6 +45,26 @@ export default function MoodleProductsPage() {
                     </li>
                   ))}
                 </ul>
+                {o.href === "/products/moodle/theme-development" ? (
+                  <Link
+                    href="/products/moodle/tresa"
+                    className="group mt-5 block overflow-hidden rounded-xl border border-border"
+                  >
+                    <Image
+                      src="/products/tresa-screenshot.png"
+                      alt="Tresa Moodle theme preview"
+                      width={1440}
+                      height={900}
+                      className="aspect-[16/8] w-full object-cover object-top"
+                    />
+                    <div className="flex items-center justify-between px-4 py-3">
+                      <span className="text-sm font-semibold text-foreground group-hover:text-brand">
+                        Tresa Moodle Theme · $30
+                      </span>
+                      <span className="text-sm font-semibold text-brand">View</span>
+                    </div>
+                  </Link>
+                ) : null}
                 {o.href ? (
                   <Link
                     href={o.href}

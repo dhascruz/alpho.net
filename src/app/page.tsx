@@ -13,8 +13,8 @@ export default function Home() {
     <>
       <Hero />
       <StatsStrip />
-      <ServicesGrid />
       <ProductsSlider />
+      <ServicesGrid />
       <ValueProps />
       <FeaturedCaseStudy />
       <IndustriesStrip />
